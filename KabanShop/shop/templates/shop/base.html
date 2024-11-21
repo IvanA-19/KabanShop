@@ -1,0 +1,86 @@
+{% load django_bootstrap5 %}
+{% load static %}
+
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>{% block title %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'shop/css/base.css' %}">
+    <link rel="icon" href="{% static 'shop/images/icon/icon.jpeg' %}">
+
+    {% bootstrap_css %}
+    {% bootstrap_javascript %}
+</head>
+    <body>
+        <nav class="navbar navbar-expand-md navbar-light bg-light mb-4 border">
+        <a class="navbar-brand" href="{% url 'shop:index' %}" style="font-size: 20pt">
+            <img src="{% static 'shop/images/logo/logo.png' %}" alt="logo" width="50px" height="50px" >
+            Главная</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse"
+        aria-expanded="false" aria-label="Toggle navigation" aria-controls="navbarCollapse">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+            <div class="collapse navbar-collapse" id="navbarCollapse" style="font-size: 14pt">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'shop:products' %}">Каталог товаров</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="{% url 'shop:cart' %}">Корзина
+                            <img src="{% static 'shop/images/cart/cart.png' %}" alt="cart"
+                            width="25px" height="25px"></a>
+                    </li>
+                </ul>
+
+            </div>
+        </nav>
+
+        <main role="main" class="container">
+            <div class="base">
+                <div class="header pb-2 mb-2 border-bottom">
+                    {% block page_header %}{% endblock %}
+                </div>
+                <div class="content">
+                    {% block content %}{% endblock %}
+                </div>
+
+                <div class="footer">
+                    <div style="float: left; margin-right: 15px">
+                        <h6>По возникающим вопросам писать на почту
+                            <br>или в телеграм</h6>
+                        <div>kabanshop53@gmail.com</div>
+                        <div><a href="#" style="color: black">KabanShop</a></div>
+                    </div>
+
+                    <div style="float: left; margin-right: 15px">
+                        <h6 style="text-align: left;  width: 135px">Чаты в соцсетях</h6>
+                        <div style=" float: left; margin-right: 15px">
+                            <a href="#" target="_blank"><img src="{% static 'shop/images/logo/img_1.png' %}" alt="" width="60px" height="60px"></a>
+                        </div>
+
+                        <div style="margin-top: 5px;">
+                            <a href="#" target="_blank"><img src="{% static 'shop/images/logo/img_2.png' %}" alt="" width="60px" height="60px"></a>
+                        </div>
+                    </div>
+                    <div style="float: left">
+                        <h6>Сервер в Discord</h6>
+                        <div style="margin-right: 15px; float: left">
+                            <a href="#" target="_blank"><img src="{% static 'shop/images/logo/ds_logo.png' %}" alt="Discord" width="60px" height="60px"></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+
+
+
+        <div class="btn-up btn-up_hide"></div>
+        <script src="{% static 'shop/js/base.js' %}"></script>
+    </body>
+</html>

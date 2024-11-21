@@ -1,0 +1,97 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@1,6..12,700&display=swap');
+
+html {
+  height: 100%;
+}
+
+.footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 10px;
+    min-height: 120px;
+    height: auto;
+    background-color: #F5F5F5;
+}
+
+.content{
+    padding-bottom: 350px;
+}
+
+.navbar{
+    background-color: #7B68EE;
+}
+
+.container-fluid .navbar-brand{
+    color: gold;
+}
+
+main {
+  min-height: calc(100vh - 30px - 18px);
+}
+
+.pb-2 h1{
+    font-size: 26pt;
+    font-weight: 600;
+    font-family: 'Nunito', sans-serif;
+    font-style: italic;
+}
+
+.navbar-brand{
+    font-size: 30pt;
+}
+
+body{
+    background: url('../images/background/background3.png');
+    background-size:cover;
+    opacity: 0.9;
+    min-height:100%;
+    position: relative;
+    margin: 0;
+    padding-bottom: 15px;
+}
+
+
+.navbar{
+    opacity: 0.93;
+}
+
+.btn-up {
+    position: fixed;
+    background-color: #4B0082;
+    right: 20px;
+    bottom: 0;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+    height: 50px;
+}
+
+.btn-up::before {
+    content: "";
+    width: 40px;
+    height: 40px;
+    background: transparent no-repeat center center;
+    background-size: 100% 100%;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='%23fff' viewBox='0 0 16 16'%3E%3Cpath fill-rule='evenodd' d='M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z'/%3E%3C/svg%3E");
+}
+
+.btn-up_hide {
+    display: none;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    .btn-up:hover {
+        background-color: #6A5ACD;
+    }
+}
+
+.content{
+    text-align: justify;
+}
+
