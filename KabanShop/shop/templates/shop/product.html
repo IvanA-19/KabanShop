@@ -1,5 +1,6 @@
 {% extends 'shop/base.html' %}
 {% load django_bootstrap5 %}
+{% load static %}
 
 {% block title %}{{product}}{% endblock %}
 
@@ -14,7 +15,29 @@
     <p>{{product.price}} Р</p>
     <!--Ссылку закодим потом-->
     <a href="" class="btn btn-lg btn-success">В корзину</a>
-    {% for photo in product_photo %}
-        <!--Тут будет слайдер-->
-    {% endfor %}
+
+    <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+            {% for photo in product_photo %}
+                <div class="swiper-slide">
+                    <figure>
+                        <img src="{{photo.photo.url}}" alt="{{photo}}_photo" width="200px">
+                    </figure>
+                </div>
+            {% endfor %}
+        </div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+    </div>
+
+
+    <link rel="stylesheet" href="{% static 'slider/css/swiper-bundle.min.css' %}"/>
+    <link rel="stylesheet" href="{% static 'slider/css/slider.css' %}">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="{% static 'slider/js/swiper-bundle.min.js' %}"></script>
+    <script src="{% static 'slider/js/slider.js' %}"></script>
+
+
 {% endblock %}
