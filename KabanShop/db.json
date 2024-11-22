@@ -1,0 +1,212 @@
+[
+{
+  "model": "shop.category",
+  "pk": 1,
+  "fields": {
+    "title": "Бытовая техника",
+    "description": "",
+    "preview": "media/category_photo/bytovaya-min.png",
+    "category_slug": "bytovaya-tehnika"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 1,
+  "fields": {
+    "title": "Пылесос",
+    "description": "",
+    "availability": true,
+    "price": 15000.0,
+    "count": 100,
+    "category": 1,
+    "product_slug": "pylesos"
+  }
+},
+{
+  "model": "shop.productphoto",
+  "pk": 1,
+  "fields": {
+    "product": 1,
+    "photo": "media/product_photo/827249.jpg"
+  }
+},
+{
+  "model": "users.userprofile",
+  "pk": 1,
+  "fields": {
+    "username": "admin",
+    "first_name": "User",
+    "last_name": "Userov",
+    "email": "admin72@mail.ru",
+    "phone_number": "89997772211",
+    "avatar": "media/user_avatars/photo_2024-09-04_17-02-43.jpg"
+  }
+},
+{
+  "model": "admin_interface.theme",
+  "pk": 1,
+  "fields": {
+    "name": "Django",
+    "active": true,
+    "title": "Администрирование Django",
+    "title_color": "#F5DD5D",
+    "title_visible": true,
+    "logo": "",
+    "logo_color": "#FFFFFF",
+    "logo_max_width": 400,
+    "logo_max_height": 100,
+    "logo_visible": true,
+    "favicon": "",
+    "env_name": "",
+    "env_color": "#E74C3C",
+    "env_visible_in_header": true,
+    "env_visible_in_favicon": true,
+    "language_chooser_active": true,
+    "language_chooser_control": "default-select",
+    "language_chooser_display": "code",
+    "css_header_background_color": "#0C4B33",
+    "css_header_text_color": "#44B78B",
+    "css_header_link_color": "#FFFFFF",
+    "css_header_link_hover_color": "#C9F0DD",
+    "css_module_background_color": "#44B78B",
+    "css_module_background_selected_color": "#FFFFCC",
+    "css_module_text_color": "#FFFFFF",
+    "css_module_link_color": "#FFFFFF",
+    "css_module_link_selected_color": "#FFFFFF",
+    "css_module_link_hover_color": "#C9F0DD",
+    "css_module_rounded_corners": true,
+    "css_generic_link_color": "#0C3C26",
+    "css_generic_link_hover_color": "#156641",
+    "css_generic_link_active_color": "#29B864",
+    "css_save_button_background_color": "#0C4B33",
+    "css_save_button_background_hover_color": "#0C3C26",
+    "css_save_button_text_color": "#FFFFFF",
+    "css_delete_button_background_color": "#BA2121",
+    "css_delete_button_background_hover_color": "#A41515",
+    "css_delete_button_text_color": "#FFFFFF",
+    "related_modal_active": true,
+    "related_modal_background_color": "#000000",
+    "related_modal_background_opacity": "0.3",
+    "related_modal_rounded_corners": true,
+    "related_modal_close_button_visible": true,
+    "list_filter_highlight": true,
+    "list_filter_dropdown": true,
+    "list_filter_sticky": true,
+    "list_filter_removal_links": false,
+    "foldable_apps": true,
+    "show_fieldsets_as_tabs": false,
+    "show_inlines_as_tabs": false,
+    "collapsible_stacked_inlines": false,
+    "collapsible_stacked_inlines_collapsed": true,
+    "collapsible_tabular_inlines": false,
+    "collapsible_tabular_inlines_collapsed": true,
+    "recent_actions_visible": true,
+    "form_submit_sticky": false,
+    "form_pagination_sticky": false
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 1,
+  "fields": {
+    "action_time": "2024-11-22T20:50:11.902Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "1",
+    "object_repr": "Бытовая техника",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 2,
+  "fields": {
+    "action_time": "2024-11-22T20:50:16.166Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "1",
+    "object_repr": "Бытовая техника",
+    "action_flag": 2,
+    "change_message": "[]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 3,
+  "fields": {
+    "action_time": "2024-11-22T20:51:35.096Z",
+    "user": 1,
+    "content_type": 12,
+    "object_id": "1",
+    "object_repr": "Бытовая техника",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0424\\u043e\\u0442\\u043e-\\u043f\\u0440\\u0435\\u0432\\u044c\\u044e\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 4,
+  "fields": {
+    "action_time": "2024-11-22T20:55:27.992Z",
+    "user": 1,
+    "content_type": 9,
+    "object_id": "1",
+    "object_repr": "Пылесос",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 5,
+  "fields": {
+    "action_time": "2024-11-22T21:00:38.179Z",
+    "user": 1,
+    "content_type": 10,
+    "object_id": "1",
+    "object_repr": "Пылесос",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 6,
+  "fields": {
+    "action_time": "2024-11-22T21:24:25.344Z",
+    "user": 1,
+    "content_type": 13,
+    "object_id": "1",
+    "object_repr": "admin",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 1,
+  "fields": {
+    "password": "pbkdf2_sha256$720000$xX1Mdr8Mt7n2kzrxW9oeLe$NWbr1s2Yf3HzgjOCEMr3CO7Fogm1x9BmUxHQb0LL/J0=",
+    "last_login": "2024-11-21T20:22:24.843Z",
+    "is_superuser": true,
+    "username": "admin",
+    "first_name": "",
+    "last_name": "",
+    "email": "admin72@mail.ru",
+    "is_staff": true,
+    "is_active": true,
+    "date_joined": "2024-11-21T20:21:58.524Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "qyu8ez0gsq1q9zvaq63tjs3csffxf8mu",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQRf-FtSHAUB4u3fsNBJhBqgaS0q6M_65NutDtPefcFwtxW2vYBi1hRnZmkp1-txTzg9oO8B7brfPc27rMie8KP-jg1470vBzu30GNo35rITIIMkVO3hppBTjlpcaJDHidJaJJSVuyaB34FIVVCEDZYRG-FOXZ-wO35TdT:1tEDh2:QKI3zd7kj3D9OrvDUuk9xKJPA1tfVS4itCwx_ht5Z9E",
+    "expire_date": "2024-12-05T20:22:24.901Z"
+  }
+}
+]

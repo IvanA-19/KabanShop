@@ -43,8 +43,6 @@ main {
 }
 
 body{
-    background: url('../images/background/background3.png');
-    background-size:cover;
     opacity: 0.9;
     min-height:100%;
     position: relative;

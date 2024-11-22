@@ -1,0 +1,24 @@
+{% extends 'shop/base.html' %}
+
+{% block title %}{{category}}{% endblock %}
+
+{% block page_header %}
+    <h1>{{category}}</h1>
+{% endblock %}
+
+{% block content %}
+    <!--Выводим список всех товаров-->
+    <ul>
+        {% for product in products %}
+            <li>
+                <h4>
+                    <a href="{% url 'shop:product' category.category_slug product.product_slug %}">{{product}}</a>
+                </h4>
+            </li>
+        {% empty %}
+            <li>
+                <h3>На данный момент нет товаров в этой категории</h3>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

@@ -1,0 +1,20 @@
+{% extends 'shop/base.html' %}
+{% load django_bootstrap5 %}
+
+{% block title %}{{product}}{% endblock %}
+
+{% block page_header %}
+    <h1><a href="{% url 'shop:category' category.category_slug %}">{{category}}</a></h1>
+
+{% endblock %}
+
+{% block content %}
+    <h3>{{product}}</h3>
+    <p>{{product.description|linebreaks}}</p>
+    <p>{{product.price}} Р</p>
+    <!--Ссылку закодим потом-->
+    <a href="" class="btn btn-lg btn-success">В корзину</a>
+    {% for photo in product_photo %}
+        <!--Тут будет слайдер-->
+    {% endfor %}
+{% endblock %}

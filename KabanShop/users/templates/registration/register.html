@@ -1,0 +1,20 @@
+{% extends 'shop/base.html' %}
+
+{% load django_bootstrap5 %}
+{% load static %}
+
+{% block title %}Регистрация{% endblock %}
+
+{% block page_header %}
+    <h1>Регистрация</h1>
+{% endblock %}
+
+{% block content %}
+    <form action="{% url 'users:register' %}" method="post">
+        {% csrf_token %}
+        {% bootstrap_form form %}
+        {% bootstrap_button button_type="submit" content="Зарегистрироваться" button_class="btn-primary" %}
+
+        <input type="hidden" name="next" value="{% url 'shop:index' %}">
+    </form>
+{% endblock %}

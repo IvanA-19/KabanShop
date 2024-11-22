@@ -7,5 +7,18 @@
 {% endblock %}
 
 {% block content %}
-
+    <!--Выводим список всех категорий-->
+    <ul>
+        {% for category in categories %}
+            <li>
+                <h4>
+                    <a href="{% url 'shop:category' category.category_slug %}">{{category}}</a>
+                </h4>
+            </li>
+        {% empty %}
+            <li>
+                <h3>На данный момент нет ни одной категории</h3>
+            </li>
+        {% endfor %}
+    </ul>
 {% endblock %}

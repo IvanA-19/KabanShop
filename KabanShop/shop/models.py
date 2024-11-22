@@ -5,9 +5,9 @@ from django.db import models
 # Create your models here.
 # Модель, отвечающая за распределение товаров по категориям
 class Category(models.Model):
-    title = models.CharField(max_length=250, verbose_name='Категория')
-    description = models.TextField(verbose_name='Описание')
-    preview = models.ImageField(upload_to='media/category_photo', verbose_name='Фото-превью')
+    title = models.CharField(max_length=250, verbose_name='Категория', null=True, blank=True)
+    description = models.TextField(verbose_name='Описание', null=True, blank=True)
+    preview = models.ImageField(upload_to='media/category_photo', verbose_name='Фото-превью', null=True, blank=True)
     category_slug = models.SlugField(max_length=250, unique=True, db_index=True, verbose_name='URL')
 
     def __str__(self):
@@ -31,7 +31,7 @@ class Product(models.Model):
     # Количество доступных единиц товара
     count = models.IntegerField(verbose_name='Количество доступных товаров', null=True, blank=True)
     # Привязываем товары к определенной категории(например бытовая техника, продукты и т.п.)
-    category = models.ForeignKey(Category, on_delete=models.CASCADE)
+    category = models.ForeignKey(Category, on_delete=models.CASCADE, verbose_name='Категория')
     # Слаг. Об этом читать в методичке
     product_slug = models.SlugField(max_length=250, unique=True, db_index=True, verbose_name='URL')
 
