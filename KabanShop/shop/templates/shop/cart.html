@@ -1,4 +1,5 @@
 {% extends 'shop/base.html' %}
+{% load django_bootstrap5 %}
 
 {% block title %}Корзина{% endblock %}
 
@@ -7,5 +8,18 @@
 {% endblock %}
 
 {% block content %}
+    {% for product in products %}
+        <h3>{{product}}</h3>
+        <p>{{product.count}}</p>
+        <p>{{product.price}}</p>
+        <a href="{% url 'shop:delete_product' product.id %}" class="btn btn-lg btn-danger">Удалить</a>
+    {% empty %}
+        <h3>На данный момент в корзине нет товаров</h3>
+        <a href="{% url 'shop:products' %}" class="btn btn-lg btn-success">К покупкам</a>
+    {% endfor %}
 
+    {% if products %}
+        <h4>Итоговая цена: {{final_price}}</h4>
+        <a href="{% url 'shop:ordered' %}" class="btn btn-lg btn-primary">Оформить заказ</a>
+    {% endif %}
 {% endblock %}

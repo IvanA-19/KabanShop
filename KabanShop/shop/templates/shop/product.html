@@ -14,22 +14,24 @@
     <p>{{product.description|linebreaks}}</p>
     <p>{{product.price}} Р</p>
     <!--Ссылку закодим потом-->
-    <a href="" class="btn btn-lg btn-success">В корзину</a>
-
-    <div class="swiper mySwiper">
-        <div class="swiper-wrapper">
-            {% for photo in product_photo %}
-                <div class="swiper-slide">
-                    <figure>
-                        <img src="{{photo.photo.url}}" alt="{{photo}}_photo" width="200px">
-                    </figure>
-                </div>
-            {% endfor %}
+    <a href="{% url 'shop:order' category.category_slug product.product_slug %}"
+       class="btn btn-lg btn-success">В корзину</a>
+    {% if product_photo %}
+        <div class="swiper mySwiper">
+            <div class="swiper-wrapper">
+                {% for photo in product_photo %}
+                    <div class="swiper-slide">
+                        <figure>
+                            <img src="{{photo.photo.url}}" alt="{{photo}}_photo" width="200px">
+                        </figure>
+                    </div>
+                {% endfor %}
+            </div>
+            <div class="swiper-pagination"></div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
         </div>
-        <div class="swiper-pagination"></div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-    </div>
+    {% endif %}
 
 
     <link rel="stylesheet" href="{% static 'slider/css/swiper-bundle.min.css' %}"/>

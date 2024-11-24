@@ -1,0 +1,16 @@
+{% extends 'shop/base.html' %}
+{% load django_bootstrap5 %}
+
+{% block title %}Товар в корзине{% endblock %}
+
+{% block page_header %}
+    <h1>Товар добавлен в корзину</h1>
+{% endblock %}
+
+{% block content %}
+    <h3>Товар успешно добавлен в корзину</h3>
+    <a href="{% url 'shop:products' %}" class="btn btn-lg btn-success">Продолжить покупки</a>
+    <a href="{% url 'shop:cart' %}" class="btn btn-lg btn-primary">Перейти к корзине</a>
+
+{% endblock %}
+

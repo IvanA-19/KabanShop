@@ -13,6 +13,9 @@ class Category(models.Model):
     def __str__(self):
         return self.title
 
+    def get_absolute_url(self):
+        return f'/shop/{self.category_slug}'
+
     class Meta:
         verbose_name = 'Категорию'
         verbose_name_plural = 'Категории'
@@ -37,6 +40,9 @@ class Product(models.Model):
 
     def __str__(self):
         return self.title
+
+    def get_absolute_url(self):
+        return f'/shop/{self.category.category_slug}/{self.product_slug}'
 
     class Meta:
         verbose_name = 'Товар'
@@ -94,7 +100,7 @@ class Cart(models.Model):
     buyer = models.ForeignKey(User, on_delete=models.CASCADE, verbose_name='Покупатель', null=True, blank=True)
 
     def __str__(self):
-        return self.product.title
+        return self.product
 
     class Meta:
         verbose_name = 'Товар'

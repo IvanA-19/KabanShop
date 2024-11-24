@@ -1,0 +1,19 @@
+{% extends 'shop/base.html' %}
+{% load django_bootstrap5 %}
+
+{% block title %}Не удалось добавить товар{% endblock %}
+
+{% block page_header %}
+    <h1>Не удалось добавить товар в корзину</h1>
+{% endblock %}
+
+{% block content %}
+    <h3>К сожалению нам не удалось добавить товар в корзину, поскольку сейчас магазин не располагает
+    таким количеством единиц товара.<br>Приносим свои извинения!</h3>
+    <a href="{% url 'shop:index' %}" class="btn btn-lg btn-primary">На главную</a>
+    <a href="{% url 'shop:product' category.category_slug product.product_slug %}"
+    class="btn btn-lg btn-danger">Вернуться к карточке товара</a>
+    <a href="{% url 'shop:order' category.category_slug product.product_slug %}"
+    class="btn btn-lg btn-success">Попробовать снова</a>
+{% endblock %}
+
