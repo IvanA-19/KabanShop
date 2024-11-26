@@ -27,6 +27,9 @@
                 {% if profile.phone_number %}
                     <h4>Номер телефона: {{profile.phone_number}}</h4>
                 {% endif %}
+                {% if profile.address %}
+                    <h4>Адрес: {{profile.address}}</h4>
+                {% endif %}
                 <a href="{% url 'users:edit_profile' %}" class="btn btn-lg btn-primary">Редактировать профиль</a>
             </div>
         </div>

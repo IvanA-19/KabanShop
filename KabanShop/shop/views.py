@@ -1,6 +1,8 @@
 from django.shortcuts import render, redirect
 from .models import *
 from .forms import OrderForm
+from django.contrib.auth.decorators import login_required
+from users.models import UserProfile
 
 
 # Create your views here.
@@ -15,7 +17,7 @@ def shop_view(request):
     return render(request, 'shop/shop.html', context=context)
 
 
-# Это закодим потом
+@login_required(login_url='users:login')
 def cart_view(request):
     products_in_cart = Cart.objects.filter(buyer_id=request.user)
     final_price = 0
@@ -48,6 +50,7 @@ def product_view(request, category_slug, product_slug):
     return render(request, 'shop/product.html', context=context)
 
 
+@login_required(login_url='users:login')
 def order_error_view(request, category_slug, product_slug):
     category = Category.objects.get(category_slug=category_slug)
     product = Product.objects.get(product_slug=product_slug)
@@ -57,6 +60,7 @@ def order_error_view(request, category_slug, product_slug):
     return render(request, 'shop/order_error.html', context=context)
 
 
+@login_required(login_url='users:login')
 def added_to_cart_view(request, category_slug, product_slug):
     category = Category.objects.get(category_slug=category_slug)
     product = Product.objects.get(product_slug=product_slug)
@@ -64,6 +68,7 @@ def added_to_cart_view(request, category_slug, product_slug):
     return render(request, 'shop/added_to_cart.html', context=context)
 
 
+@login_required(login_url='users:login')
 def order_view(request, category_slug, product_slug):
     product = Product.objects.get(product_slug=product_slug)
     product_in_ware_house = WareHouse.objects.filter(product_id=product.id)
@@ -108,6 +113,7 @@ def order_view(request, category_slug, product_slug):
     return render(request, 'shop/order.html', context=context)
 
 
+@login_required(login_url='users:login')
 def delete_product_view(request, product_id):
     product = Cart.objects.get(id=product_id)
     product_in_shop = Product.objects.get(title=product.product)
@@ -117,8 +123,19 @@ def delete_product_view(request, product_id):
     return redirect('shop:cart')
 
 
+@login_required(login_url='users:login')
+def fill_profile_view(request):
+    return render(request, 'shop/fill_profile.html')
+
+
+@login_required(login_url='users:login')
 def ordered_view(request):
-    products = Cart.objects.filter(buyer_id=request.user)
-    for product in products:
-        product.delete()
-    return render(request, 'shop/ordered.html')
+    user_profile = UserProfile.objects.get(email=request.user.email)
+    if user_profile:
+        if user_profile.email and user_profile.phone_number and user_profile.address:
+            products = Cart.objects.filter(buyer_id=request.user)
+            for product in products:
+                product.delete()
+            return render(request, 'shop/ordered.html')
+
+    return redirect('shop:fill_profile')

@@ -33,13 +33,9 @@ class EditProfileForm(forms.ModelForm):
     email = forms.EmailField(max_length=100, label='Электронная почта')
     phone_number = forms.CharField(max_length=30, label='Номер телефона', required=False)
     avatar = forms.ImageField(label='Аватар')
+    address = forms.CharField(max_length=300, label='Адрес')
 
     class Meta:
         model = UserProfile
-        fields = ['username', 'first_name', 'last_name', 'email', 'phone_number', 'avatar']
-
-
-
-
-
+        fields = ['username', 'first_name', 'last_name', 'email', 'phone_number', 'avatar', 'address']
 
