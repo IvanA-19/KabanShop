@@ -13,7 +13,7 @@
         <div class="profile_container">
             <div class="avatar_container">
                 {% if profile.avatar %}
-                <img src="{{profile.avatar.url}}" alt="user_avatar" class="avatar_img">
+                <img src="{{profile.avatar.url}}" width="300px" height="300px" alt="user_avatar" class="avatar_img">
                 {% else %}
                     <img src="{% static 'shop/images/avatars/void_avatar.jpg' %}" width="300px" alt="">
                 {% endif %}
