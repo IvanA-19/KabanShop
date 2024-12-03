@@ -105,3 +105,17 @@ class Cart(models.Model):
     class Meta:
         verbose_name = 'Товар'
         verbose_name_plural = 'Товары в корзине'
+
+
+class RemovedCategories(models.Model):
+    title = models.CharField(max_length=250, verbose_name='Категория', null=True, blank=True)
+    description = models.TextField(verbose_name='Описание', null=True, blank=True)
+    preview = models.ImageField(upload_to='media/category_photo', verbose_name='Фото-превью', null=True, blank=True)
+    category_slug = models.SlugField(max_length=250, unique=True, db_index=True, verbose_name='URL')
+
+    def __str__(self):
+        return self.title
+
+    class Meta:
+        verbose_name = 'Удаленную категорию'
+        verbose_name_plural = 'Удаленные категории'
