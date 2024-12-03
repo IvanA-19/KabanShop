@@ -1,0 +1,30 @@
+.kaban-hero {
+  background-color: #f8f9fa; /* Светло-серый фон */
+  padding: 80px 0; /* Вертикальные отступы */
+  text-align: center; /* Центрирование текста */
+}
+
+.kaban-hero h2 {
+    font-family: 'Segoe Print';
+    font-weight: 600;
+    font-size: 2rem; /* Размер заголовка */
+    line-height: 1.5; /* Межстрочный интервал */
+    margin-bottom: 30px; /* Отступ снизу */
+    color: #343a40; /* Темно-серый цвет текста */
+}
+
+
+.kaban-hero .btn-success {
+    font-size: 20pt; /* Размер текста на кнопке */
+    padding: 20px 40px; /* Отступы внутри кнопки */
+    border-radius: 10px; /* Скругленные углы */
+    display: inline-block; /* Предотвращение растягивания кнопки на всю ширину */
+}
+
+.kaban-hero img {
+  max-width: 100%; /* Убедитесь, что изображение не будет больше чем контейнер */
+  height: auto;
+  display: block;
+  margin: 0 auto 30px auto; /* Центрирование картинки */
+  border-radius: 10px;
+}

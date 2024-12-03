@@ -1,0 +1,14 @@
+.fill-profile-container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.fill-profile-container h3 {
+    margin-bottom: 20px;
+    font-size: 1.2em;
+}
+
+.btn-edit-profile {
+    padding: 15px 30px; /* Увеличиваем отступы для кнопки */
+    font-size: 1.1em;  /* Увеличиваем размер шрифта */
+}

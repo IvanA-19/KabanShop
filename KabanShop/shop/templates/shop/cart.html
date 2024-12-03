@@ -1,5 +1,6 @@
 {% extends 'shop/base.html' %}
 {% load django_bootstrap5 %}
+{% load static %}
 
 {% block title %}Корзина{% endblock %}
 
@@ -8,18 +9,29 @@
 {% endblock %}
 
 {% block content %}
-    {% for product in products %}
-        <h3>{{product}}</h3>
-        <p>{{product.count}}</p>
-        <p>{{product.price}}</p>
-        <a href="{% url 'shop:delete_product' product.id %}" class="btn btn-lg btn-danger">Удалить</a>
-    {% empty %}
-        <h3>На данный момент в корзине нет товаров</h3>
-        <a href="{% url 'shop:products' %}" class="btn btn-lg btn-success">К покупкам</a>
-    {% endfor %}
+    <div class="cart-container">
+        {% for product in products %}
+            <div class="cart-item">
+                <div class="item-details">
+                    <h3>{{ product.product }}</h3>
+                    <p>Количество: {{ product.count }}</p>
+                    <p>Цена: {{ product.price }}</p>
+                </div>
+                <a href="{% url 'shop:delete_product' product.id %}" class="btn btn-danger btn-sm delete-button">Удалить</a>
+            </div>
+        {% empty %}
+            <div class="empty-cart">
+                <h3>На данный момент в корзине нет товаров</h3>
+                <a href="{% url 'shop:products' %}" class="btn btn-success">К покупкам</a>
+            </div>
+        {% endfor %}
 
-    {% if products %}
-        <h4>Итоговая цена: {{final_price}}</h4>
-        <a href="{% url 'shop:ordered' %}" class="btn btn-lg btn-primary">Оформить заказ</a>
-    {% endif %}
+        {% if products %}
+            <div class="cart-summary">
+                <h4>Итоговая цена: {{ final_price }}</h4>
+                <a href="{% url 'shop:ordered' %}" class="btn btn-primary">Оформить заказ</a>
+            </div>
+        {% endif %}
+    </div>
+    <link rel="stylesheet" href="{% static 'shop/css/cart.css' %}">
 {% endblock %}

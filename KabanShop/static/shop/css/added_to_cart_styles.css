@@ -1,0 +1,15 @@
+.added-to-cart-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 50px; /* Отступ сверху */
+}
+
+.added-to-cart-container h3 {
+    margin-bottom: 20px; /* Отступ снизу заголовка */
+    font-size: 1.5em;
+}
+
+.added-to-cart-container a.btn {
+    margin: 10px; /* Отступ между кнопками */
+}

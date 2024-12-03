@@ -1,33 +1,386 @@
 [
 {
   "model": "shop.category",
-  "pk": 1,
+  "pk": 2,
   "fields": {
-    "title": "Бытовая техника",
+    "title": "ХЛЕБ",
     "description": "",
-    "preview": "media/category_photo/bytovaya-min.png",
-    "category_slug": "bytovaya-tehnika"
+    "preview": "media/category_photo/orig.jpg",
+    "category_slug": "hleb"
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 3,
+  "fields": {
+    "title": "МОЛОЧКА",
+    "description": "",
+    "preview": "media/category_photo/moloko-list_peSUwPd.jpg",
+    "category_slug": "molochka"
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 4,
+  "fields": {
+    "title": "МЯСО",
+    "description": "",
+    "preview": "media/category_photo/govyadina-duhovaya-fileshki.jpeg",
+    "category_slug": "myaso"
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 5,
+  "fields": {
+    "title": "КРУПЫ",
+    "description": "",
+    "preview": "media/category_photo/krupy-dlja-pohudenija-1536x1024.jpeg",
+    "category_slug": "krupy"
+  }
+},
+{
+  "model": "shop.category",
+  "pk": 6,
+  "fields": {
+    "title": "ОВОЩИ И ФРУКТЫ",
+    "description": "",
+    "preview": "media/category_photo/d1d27e82-6f83-5fda-acfc-a171b0c585e6.jpg",
+    "category_slug": "ovoshi-i-frukty"
   }
 },
 {
   "model": "shop.product",
-  "pk": 1,
+  "pk": 2,
   "fields": {
-    "title": "Пылесос",
+    "title": "ХЛЕБ РЖАНОЙ",
     "description": "",
     "availability": true,
-    "price": 15000.0,
-    "count": 100,
-    "category": 1,
-    "product_slug": "pylesos"
+    "price": 25.0,
+    "count": 38,
+    "category": 2,
+    "product_slug": "hleb-rzhanoj"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 3,
+  "fields": {
+    "title": "БАТОН",
+    "description": "",
+    "availability": true,
+    "price": 50.0,
+    "count": 37,
+    "category": 2,
+    "product_slug": "baton"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 4,
+  "fields": {
+    "title": "БУЛКА СЫТНИК",
+    "description": "",
+    "availability": true,
+    "price": 35.0,
+    "count": 80,
+    "category": 2,
+    "product_slug": "bulka-sytnik"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 5,
+  "fields": {
+    "title": "МОЛОКО",
+    "description": "",
+    "availability": true,
+    "price": 70.0,
+    "count": 22,
+    "category": 3,
+    "product_slug": "moloko"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 6,
+  "fields": {
+    "title": "КЕФИР",
+    "description": "",
+    "availability": true,
+    "price": 90.0,
+    "count": 20,
+    "category": 3,
+    "product_slug": "kefir"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 7,
+  "fields": {
+    "title": "СМЕТАНА",
+    "description": "",
+    "availability": true,
+    "price": 55.0,
+    "count": 19,
+    "category": 3,
+    "product_slug": "smetana"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 8,
+  "fields": {
+    "title": "ГОВЯДИНА",
+    "description": "",
+    "availability": true,
+    "price": 400.0,
+    "count": 109,
+    "category": 4,
+    "product_slug": "govyadina"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 9,
+  "fields": {
+    "title": "КУРИЦА",
+    "description": "",
+    "availability": true,
+    "price": 250.0,
+    "count": 8,
+    "category": 4,
+    "product_slug": "kurica"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 10,
+  "fields": {
+    "title": "СВИНИНА",
+    "description": "",
+    "availability": true,
+    "price": 300.0,
+    "count": 54,
+    "category": 4,
+    "product_slug": "svinina"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 11,
+  "fields": {
+    "title": "ГРЕЧКА",
+    "description": "",
+    "availability": true,
+    "price": 60.0,
+    "count": 77,
+    "category": 5,
+    "product_slug": "grechka"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 12,
+  "fields": {
+    "title": "РИС",
+    "description": "",
+    "availability": true,
+    "price": 90.0,
+    "count": 78,
+    "category": 5,
+    "product_slug": "ris"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 13,
+  "fields": {
+    "title": "ОВСЯНКА",
+    "description": "",
+    "availability": true,
+    "price": 70.0,
+    "count": 50,
+    "category": 5,
+    "product_slug": "ovsyanka"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 14,
+  "fields": {
+    "title": "БАНАН",
+    "description": "",
+    "availability": true,
+    "price": 130.0,
+    "count": 8,
+    "category": 6,
+    "product_slug": "banan"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 15,
+  "fields": {
+    "title": "ПОМИДОР",
+    "description": "",
+    "availability": true,
+    "price": 200.0,
+    "count": 50,
+    "category": 6,
+    "product_slug": "pomidor"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 16,
+  "fields": {
+    "title": "ОГУРЕЦ",
+    "description": "",
+    "availability": true,
+    "price": 220.0,
+    "count": 49,
+    "category": 6,
+    "product_slug": "ogurec"
+  }
+},
+{
+  "model": "shop.product",
+  "pk": 17,
+  "fields": {
+    "title": "ЯБЛОКО",
+    "description": "",
+    "availability": true,
+    "price": 140.0,
+    "count": 86,
+    "category": 6,
+    "product_slug": "yabloko"
+  }
+},
+{
+  "model": "shop.warehouse",
+  "pk": 1,
+  "fields": {
+    "product": 3,
+    "availability": true,
+    "count": 102
+  }
+},
+{
+  "model": "shop.warehouse",
+  "pk": 2,
+  "fields": {
+    "product": 8,
+    "availability": false,
+    "count": 0
+  }
+},
+{
+  "model": "shop.warehouse",
+  "pk": 3,
+  "fields": {
+    "product": 11,
+    "availability": true,
+    "count": 50
+  }
+},
+{
+  "model": "shop.warehouse",
+  "pk": 4,
+  "fields": {
+    "product": 14,
+    "availability": false,
+    "count": 0
+  }
+},
+{
+  "model": "shop.warehouse",
+  "pk": 5,
+  "fields": {
+    "product": 12,
+    "availability": true,
+    "count": 30
+  }
+},
+{
+  "model": "shop.warehouse",
+  "pk": 6,
+  "fields": {
+    "product": 9,
+    "availability": false,
+    "count": 0
   }
 },
 {
   "model": "shop.productphoto",
-  "pk": 1,
+  "pk": 2,
   "fields": {
-    "product": 1,
-    "photo": "media/product_photo/827249.jpg"
+    "product": 5,
+    "photo": "media/product_photo/moloko-list_SMxUmPC.jpg"
+  }
+},
+{
+  "model": "shop.productphoto",
+  "pk": 3,
+  "fields": {
+    "product": 8,
+    "photo": "media/product_photo/govyadina-duhovaya-fileshki.jpeg"
+  }
+},
+{
+  "model": "shop.productphoto",
+  "pk": 4,
+  "fields": {
+    "product": 5,
+    "photo": "media/product_photo/2600_16.jpg"
+  }
+},
+{
+  "model": "shop.productphoto",
+  "pk": 5,
+  "fields": {
+    "product": 11,
+    "photo": "media/product_photo/8ea59d019a634b479523716e29425a97.jpg"
+  }
+},
+{
+  "model": "shop.cart",
+  "pk": 7,
+  "fields": {
+    "product": "МОЛОКО",
+    "price": 70.0,
+    "count": 2,
+    "buyer": 9
+  }
+},
+{
+  "model": "shop.cart",
+  "pk": 8,
+  "fields": {
+    "product": "МОЛОКО",
+    "price": 70.0,
+    "count": 2,
+    "buyer": 9
+  }
+},
+{
+  "model": "shop.cart",
+  "pk": 15,
+  "fields": {
+    "product": "ГРЕЧКА",
+    "price": 60.0,
+    "count": 23,
+    "buyer": 8
+  }
+},
+{
+  "model": "shop.cart",
+  "pk": 16,
+  "fields": {
+    "product": "ПОМИДОР",
+    "price": 200.0,
+    "count": 100,
+    "buyer": 8
   }
 },
 {
@@ -37,9 +390,62 @@
     "username": "admin",
     "first_name": "User",
     "last_name": "Userov",
-    "email": "admin72@mail.ru",
+    "email": "nik.gal.33@mail.ru",
     "phone_number": "89997772211",
-    "avatar": "media/user_avatars/photo_2024-09-04_17-02-43.jpg"
+    "avatar": "media/user_avatars/orig.jpg",
+    "address": "Рим"
+  }
+},
+{
+  "model": "users.userprofile",
+  "pk": 2,
+  "fields": {
+    "username": "vlad",
+    "first_name": "Владимир",
+    "last_name": "Рыбкин",
+    "email": "vlad@gmail.com",
+    "phone_number": "+78718798761",
+    "avatar": "media/user_avatars/moloko-list.jpg",
+    "address": "Ванеева. 9"
+  }
+},
+{
+  "model": "users.userprofile",
+  "pk": 3,
+  "fields": {
+    "username": "fdgdfgdf",
+    "first_name": "dfgdfgfdg",
+    "last_name": "gdfgdfg",
+    "email": "gdfgfdg@gmail.com",
+    "phone_number": null,
+    "avatar": "",
+    "address": null
+  }
+},
+{
+  "model": "users.userprofile",
+  "pk": 4,
+  "fields": {
+    "username": "sddfgsdg",
+    "first_name": "sdfsdf",
+    "last_name": "fsdfsdf",
+    "email": "sdfsdf@gmail.com",
+    "phone_number": null,
+    "avatar": "",
+    "address": null
+  }
+},
+{
+  "model": "users.userprofile",
+  "pk": 5,
+  "fields": {
+    "username": "iosif",
+    "first_name": "иосиф",
+    "last_name": "татаринов",
+    "email": "it12@gmail.com",
+    "phone_number": "760319",
+    "avatar": "media/user_avatars/1696502271_gas-kvas-com-p-kartinki-lyubie-5.jpg",
+    "address": "Ванеева. 9"
   }
 },
 {
@@ -184,21 +590,824 @@
   }
 },
 {
+  "model": "admin.logentry",
+  "pk": 7,
+  "fields": {
+    "action_time": "2024-12-01T13:39:25.234Z",
+    "user": 1,
+    "content_type": 5,
+    "object_id": "2",
+    "object_repr": "ХЛЕБНЫЙ ОТДЕЛ",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 8,
+  "fields": {
+    "action_time": "2024-12-01T13:40:31.048Z",
+    "user": 1,
+    "content_type": 5,
+    "object_id": "3",
+    "object_repr": "МОЛОЧНЫЙ ОТДЕЛ",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 9,
+  "fields": {
+    "action_time": "2024-12-01T13:41:30.369Z",
+    "user": 1,
+    "content_type": 5,
+    "object_id": "3",
+    "object_repr": "МОЛОЧНЫЙ ОТДЕЛ",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0424\\u043e\\u0442\\u043e-\\u043f\\u0440\\u0435\\u0432\\u044c\\u044e\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 10,
+  "fields": {
+    "action_time": "2024-12-01T13:42:35.405Z",
+    "user": 1,
+    "content_type": 5,
+    "object_id": "4",
+    "object_repr": "МЯСО",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 11,
+  "fields": {
+    "action_time": "2024-12-01T13:43:07.540Z",
+    "user": 1,
+    "content_type": 5,
+    "object_id": "5",
+    "object_repr": "КРУПЫ",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 12,
+  "fields": {
+    "action_time": "2024-12-01T13:44:14.184Z",
+    "user": 1,
+    "content_type": 5,
+    "object_id": "6",
+    "object_repr": "ОВОЩИ И ФРУКТЫ",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 13,
+  "fields": {
+    "action_time": "2024-12-01T13:44:45.459Z",
+    "user": 1,
+    "content_type": 5,
+    "object_id": "3",
+    "object_repr": "МОЛОКО",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u041a\\u0430\\u0442\\u0435\\u0433\\u043e\\u0440\\u0438\\u044f\", \"URL\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 14,
+  "fields": {
+    "action_time": "2024-12-01T13:45:20.552Z",
+    "user": 1,
+    "content_type": 5,
+    "object_id": "2",
+    "object_repr": "ХЛЕБ",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u041a\\u0430\\u0442\\u0435\\u0433\\u043e\\u0440\\u0438\\u044f\", \"URL\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 15,
+  "fields": {
+    "action_time": "2024-12-01T13:47:32.569Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "2",
+    "object_repr": "ХЛЕБ РЖАНОЙ",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 16,
+  "fields": {
+    "action_time": "2024-12-01T13:47:56.419Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "3",
+    "object_repr": "БАТОН",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 17,
+  "fields": {
+    "action_time": "2024-12-01T13:48:20.397Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "4",
+    "object_repr": "БУЛКА СЫТНИК",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 18,
+  "fields": {
+    "action_time": "2024-12-01T13:48:40.349Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "5",
+    "object_repr": "МОЛОКО",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 19,
+  "fields": {
+    "action_time": "2024-12-01T13:48:58.531Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "6",
+    "object_repr": "КЕФИР",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 20,
+  "fields": {
+    "action_time": "2024-12-01T13:49:12.070Z",
+    "user": 1,
+    "content_type": 5,
+    "object_id": "3",
+    "object_repr": "МОЛОЧКА",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u041a\\u0430\\u0442\\u0435\\u0433\\u043e\\u0440\\u0438\\u044f\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 21,
+  "fields": {
+    "action_time": "2024-12-01T13:49:26.748Z",
+    "user": 1,
+    "content_type": 5,
+    "object_id": "3",
+    "object_repr": "МОЛОЧКА",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"URL\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 22,
+  "fields": {
+    "action_time": "2024-12-01T13:49:50.721Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "7",
+    "object_repr": "СМЕТАНА",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 23,
+  "fields": {
+    "action_time": "2024-12-01T13:50:19.164Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "8",
+    "object_repr": "ГОВЯДИНА",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 24,
+  "fields": {
+    "action_time": "2024-12-01T13:50:43.086Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "9",
+    "object_repr": "КУРИЦА",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 25,
+  "fields": {
+    "action_time": "2024-12-01T13:50:57.551Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "9",
+    "object_repr": "КУРИЦА",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0414\\u043e\\u0441\\u0442\\u0443\\u043f\\u0435\\u043d \\u0432 \\u043c\\u0430\\u0433\\u0430\\u0437\\u0438\\u043d\\u0435\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 26,
+  "fields": {
+    "action_time": "2024-12-01T13:51:23.276Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "10",
+    "object_repr": "СВИНИНА",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 27,
+  "fields": {
+    "action_time": "2024-12-01T13:51:48.547Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "11",
+    "object_repr": "ГРЕЧКА",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 28,
+  "fields": {
+    "action_time": "2024-12-01T13:52:06.608Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "12",
+    "object_repr": "РИС",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 29,
+  "fields": {
+    "action_time": "2024-12-01T13:53:13.980Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "13",
+    "object_repr": "ОВСЯНКА",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 30,
+  "fields": {
+    "action_time": "2024-12-01T13:53:43.451Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "14",
+    "object_repr": "БАНАН",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 31,
+  "fields": {
+    "action_time": "2024-12-01T13:54:43.215Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "15",
+    "object_repr": "ПОМИДОР",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 32,
+  "fields": {
+    "action_time": "2024-12-01T13:55:21.578Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "16",
+    "object_repr": "ОГУРЕЦ",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 33,
+  "fields": {
+    "action_time": "2024-12-01T13:56:01.059Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "17",
+    "object_repr": "ЯБЛОКО",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 34,
+  "fields": {
+    "action_time": "2024-12-01T13:56:08.317Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "4",
+    "object_repr": "БУЛКА СЫТНИК",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0414\\u043e\\u0441\\u0442\\u0443\\u043f\\u0435\\u043d \\u0432 \\u043c\\u0430\\u0433\\u0430\\u0437\\u0438\\u043d\\u0435\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 35,
+  "fields": {
+    "action_time": "2024-12-01T13:56:12.701Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "5",
+    "object_repr": "МОЛОКО",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0414\\u043e\\u0441\\u0442\\u0443\\u043f\\u0435\\u043d \\u0432 \\u043c\\u0430\\u0433\\u0430\\u0437\\u0438\\u043d\\u0435\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 36,
+  "fields": {
+    "action_time": "2024-12-01T13:56:17.177Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "6",
+    "object_repr": "КЕФИР",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0414\\u043e\\u0441\\u0442\\u0443\\u043f\\u0435\\u043d \\u0432 \\u043c\\u0430\\u0433\\u0430\\u0437\\u0438\\u043d\\u0435\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 37,
+  "fields": {
+    "action_time": "2024-12-01T13:56:21.366Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "8",
+    "object_repr": "ГОВЯДИНА",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0414\\u043e\\u0441\\u0442\\u0443\\u043f\\u0435\\u043d \\u0432 \\u043c\\u0430\\u0433\\u0430\\u0437\\u0438\\u043d\\u0435\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 38,
+  "fields": {
+    "action_time": "2024-12-01T13:56:26.206Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "15",
+    "object_repr": "ПОМИДОР",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0414\\u043e\\u0441\\u0442\\u0443\\u043f\\u0435\\u043d \\u0432 \\u043c\\u0430\\u0433\\u0430\\u0437\\u0438\\u043d\\u0435\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 39,
+  "fields": {
+    "action_time": "2024-12-01T13:56:30.091Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "16",
+    "object_repr": "ОГУРЕЦ",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0414\\u043e\\u0441\\u0442\\u0443\\u043f\\u0435\\u043d \\u0432 \\u043c\\u0430\\u0433\\u0430\\u0437\\u0438\\u043d\\u0435\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 40,
+  "fields": {
+    "action_time": "2024-12-01T13:56:34.801Z",
+    "user": 1,
+    "content_type": 2,
+    "object_id": "17",
+    "object_repr": "ЯБЛОКО",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0414\\u043e\\u0441\\u0442\\u0443\\u043f\\u0435\\u043d \\u0432 \\u043c\\u0430\\u0433\\u0430\\u0437\\u0438\\u043d\\u0435\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 41,
+  "fields": {
+    "action_time": "2024-12-01T13:57:56.457Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "2",
+    "object_repr": "МОЛОКО",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 42,
+  "fields": {
+    "action_time": "2024-12-01T13:58:12.025Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "3",
+    "object_repr": "ГОВЯДИНА",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 43,
+  "fields": {
+    "action_time": "2024-12-01T15:47:58.875Z",
+    "user": 1,
+    "content_type": 6,
+    "object_id": "2",
+    "object_repr": "vlad",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 44,
+  "fields": {
+    "action_time": "2024-12-01T16:47:50.144Z",
+    "user": 1,
+    "content_type": 5,
+    "object_id": "3",
+    "object_repr": "МОЛОЧКА",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0424\\u043e\\u0442\\u043e-\\u043f\\u0440\\u0435\\u0432\\u044c\\u044e\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 45,
+  "fields": {
+    "action_time": "2024-12-01T16:48:40.476Z",
+    "user": 1,
+    "content_type": 5,
+    "object_id": "3",
+    "object_repr": "МОЛОЧКА",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0424\\u043e\\u0442\\u043e-\\u043f\\u0440\\u0435\\u0432\\u044c\\u044e\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 46,
+  "fields": {
+    "action_time": "2024-12-01T16:49:05.890Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "2",
+    "object_repr": "МОЛОКО",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0424\\u043e\\u0442\\u043e \\u0442\\u043e\\u0432\\u0430\\u0440\\u0430\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 47,
+  "fields": {
+    "action_time": "2024-12-01T16:49:14.984Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "2",
+    "object_repr": "МОЛОКО",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0424\\u043e\\u0442\\u043e \\u0442\\u043e\\u0432\\u0430\\u0440\\u0430\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 48,
+  "fields": {
+    "action_time": "2024-12-01T16:50:38.059Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "4",
+    "object_repr": "МОЛОКО",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 49,
+  "fields": {
+    "action_time": "2024-12-01T16:51:36.171Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "4",
+    "object_repr": "МОЛОКО",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0424\\u043e\\u0442\\u043e \\u0442\\u043e\\u0432\\u0430\\u0440\\u0430\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 50,
+  "fields": {
+    "action_time": "2024-12-01T17:49:35.322Z",
+    "user": 1,
+    "content_type": 5,
+    "object_id": "1",
+    "object_repr": "Бытовая техника",
+    "action_flag": 3,
+    "change_message": ""
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 51,
+  "fields": {
+    "action_time": "2024-12-01T17:55:07.758Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "1",
+    "object_repr": "БАТОН",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 52,
+  "fields": {
+    "action_time": "2024-12-01T17:55:14.902Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "2",
+    "object_repr": "ГОВЯДИНА",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 53,
+  "fields": {
+    "action_time": "2024-12-01T17:55:23.821Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "3",
+    "object_repr": "ГРЕЧКА",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 54,
+  "fields": {
+    "action_time": "2024-12-01T17:55:31.630Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "4",
+    "object_repr": "БАНАН",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 55,
+  "fields": {
+    "action_time": "2024-12-01T17:55:37.116Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "5",
+    "object_repr": "РИС",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 56,
+  "fields": {
+    "action_time": "2024-12-01T17:55:45.838Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "6",
+    "object_repr": "КУРИЦА",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 57,
+  "fields": {
+    "action_time": "2024-12-01T17:55:55.528Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "6",
+    "object_repr": "КУРИЦА",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0415\\u0441\\u0442\\u044c \\u043d\\u0430 \\u0441\\u043a\\u043b\\u0430\\u0434\\u0435\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 58,
+  "fields": {
+    "action_time": "2024-12-01T17:55:58.949Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "5",
+    "object_repr": "РИС",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0415\\u0441\\u0442\\u044c \\u043d\\u0430 \\u0441\\u043a\\u043b\\u0430\\u0434\\u0435\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 59,
+  "fields": {
+    "action_time": "2024-12-01T17:56:02.747Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "4",
+    "object_repr": "БАНАН",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0415\\u0441\\u0442\\u044c \\u043d\\u0430 \\u0441\\u043a\\u043b\\u0430\\u0434\\u0435\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 60,
+  "fields": {
+    "action_time": "2024-12-01T17:56:11.188Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "3",
+    "object_repr": "ГРЕЧКА",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0415\\u0441\\u0442\\u044c \\u043d\\u0430 \\u0441\\u043a\\u043b\\u0430\\u0434\\u0435\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 61,
+  "fields": {
+    "action_time": "2024-12-01T17:56:15.282Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "2",
+    "object_repr": "ГОВЯДИНА",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0415\\u0441\\u0442\\u044c \\u043d\\u0430 \\u0441\\u043a\\u043b\\u0430\\u0434\\u0435\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 62,
+  "fields": {
+    "action_time": "2024-12-01T17:56:18.153Z",
+    "user": 1,
+    "content_type": 4,
+    "object_id": "1",
+    "object_repr": "БАТОН",
+    "action_flag": 2,
+    "change_message": "[{\"changed\": {\"fields\": [\"\\u0415\\u0441\\u0442\\u044c \\u043d\\u0430 \\u0441\\u043a\\u043b\\u0430\\u0434\\u0435\"]}}]"
+  }
+},
+{
+  "model": "admin.logentry",
+  "pk": 63,
+  "fields": {
+    "action_time": "2024-12-01T18:24:36.083Z",
+    "user": 1,
+    "content_type": 3,
+    "object_id": "5",
+    "object_repr": "ГРЕЧКА",
+    "action_flag": 1,
+    "change_message": "[{\"added\": {}}]"
+  }
+},
+{
   "model": "auth.user",
   "pk": 1,
   "fields": {
     "password": "pbkdf2_sha256$720000$xX1Mdr8Mt7n2kzrxW9oeLe$NWbr1s2Yf3HzgjOCEMr3CO7Fogm1x9BmUxHQb0LL/J0=",
-    "last_login": "2024-11-21T20:22:24.843Z",
+    "last_login": "2024-12-03T20:35:49.019Z",
     "is_superuser": true,
     "username": "admin",
-    "first_name": "",
-    "last_name": "",
-    "email": "admin72@mail.ru",
+    "first_name": "User",
+    "last_name": "Userov",
+    "email": "nik.gal.33@mail.ru",
     "is_staff": true,
     "is_active": true,
     "date_joined": "2024-11-21T20:21:58.524Z",
     "groups": [],
     "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 7,
+  "fields": {
+    "password": "pbkdf2_sha256$720000$OFrKKaFhRgD9Qd8APTL4bs$aFMLtmvVU+MhstL/wABmHDwdwr+fwdlliMg5voQz6fg=",
+    "last_login": "2024-12-01T16:11:05.666Z",
+    "is_superuser": false,
+    "username": "fdgdfgdf",
+    "first_name": "dfgdfgfdg",
+    "last_name": "gdfgdfg",
+    "email": "gdfgfdg@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2024-12-01T16:11:04.937Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 8,
+  "fields": {
+    "password": "pbkdf2_sha256$720000$sAIveDBUGH4yOBru5QVXqZ$IxIQKOdM6v5d4Ofe/OLE2BuqGcJLNMEwALVguctwMQY=",
+    "last_login": "2024-12-01T18:32:30.268Z",
+    "is_superuser": false,
+    "username": "sddfgsdg",
+    "first_name": "sdfsdf",
+    "last_name": "fsdfsdf",
+    "email": "sdfsdf@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2024-12-01T16:11:40.035Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "auth.user",
+  "pk": 9,
+  "fields": {
+    "password": "pbkdf2_sha256$720000$HvZgWX3oItUnrhce7aWNZU$t/VNvUtHs0pNlN0aUMxYOA/taXr1q9HJUQS1RWyCyhM=",
+    "last_login": "2024-12-01T18:30:50.632Z",
+    "is_superuser": false,
+    "username": "iosif",
+    "first_name": "иосиф",
+    "last_name": "татаринов",
+    "email": "it12@gmail.com",
+    "is_staff": false,
+    "is_active": true,
+    "date_joined": "2024-12-01T17:17:27.234Z",
+    "groups": [],
+    "user_permissions": []
+  }
+},
+{
+  "model": "sessions.session",
+  "pk": "goge46yf752celj0v4z53szldwt54k5a",
+  "fields": {
+    "session_data": ".eJxVjMsOwiAQRf-FtSHAUB4u3fsNBJhBqgaS0q6M_65NutDtPefcFwtxW2vYBi1hRnZmkp1-txTzg9oO8B7brfPc27rMie8KP-jg1470vBzu30GNo35rITIIMkVO3hppBTjlpcaJDHidJaJJSVuyaB34FIVVCEDZYRG-FOXZ-wO35TdT:1tIZcb:wqZ_7lh6_5kEoF9Dj5dNIJr5vhVkkpSdPkXNcC-Sszs",
+    "expire_date": "2024-12-17T20:35:49.090Z"
   }
 },
 {

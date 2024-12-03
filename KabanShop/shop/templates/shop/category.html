@@ -1,24 +1,37 @@
 {% extends 'shop/base.html' %}
+{% load static %}
 
-{% block title %}{{category}}{% endblock %}
+{% block title %}{{ category.title }}{% endblock %}
 
 {% block page_header %}
-    <h1>{{category}}</h1>
+    <h1>{{ category.title }}</h1>
+    <p>{{ category.description }}</p>  <!-- Полное описание категории -->
 {% endblock %}
 
 {% block content %}
-    <!--Выводим список всех товаров-->
-    <ul>
+    <div class="products-grid">
         {% for product in products %}
-            <li>
-                <h4>
-                    <a href="{% url 'shop:product' category.category_slug product.product_slug %}">{{product}}</a>
-                </h4>
-            </li>
+            <div class="product-item" id="product-{{product.id}}">
+                <div class="product-inner">  <!-- Добавлена обертка -->
+                    <a href="{% url 'shop:product' category.category_slug product.product_slug %}">
+                        {% with product.productphoto_set.first as first_photo %}
+                            {% if first_photo %}
+                                <img src="{{ first_photo.photo.url }}" alt="{{ product.title }}" class="product-image">
+                            {% else %}
+                                <img src="{% static 'shop/images/placeholder.jpg' %}" alt="Placeholder" class="product-image">
+                            {% endif %}
+                        {% endwith %}
+                        <h3>{{ product.title }}</h3>
+                    </a>
+                    <div class="product-description" id="description-{{product.id}}">
+                        <p>{{ product.description|truncatechars:100 }}</p>
+                    </div>
+                </div>
+            </div>
         {% empty %}
-            <li>
-                <h3>На данный момент нет товаров в этой категории</h3>
-            </li>
+            <p class="text-center">В категории "{{ category.title }}" на данный момент нет товаров.</p>
         {% endfor %}
-    </ul>
+    </div>
+    <link rel="stylesheet" href="{% static 'shop/css/product_styles.css' %}">
+    <script src="{% static 'shop/js/category.js' %}"></script>
 {% endblock %}

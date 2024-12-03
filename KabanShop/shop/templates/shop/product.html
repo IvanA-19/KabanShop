@@ -2,28 +2,27 @@
 {% load django_bootstrap5 %}
 {% load static %}
 
-{% block title %}{{product}}{% endblock %}
+{% block title %}{{ product.title }}{% endblock %}
 
 {% block page_header %}
-    <h1><a href="{% url 'shop:category' category.category_slug %}">{{category}}</a></h1>
-
+    <h1><a href="{% url 'shop:category' category.category_slug %}">{{ category.title }}</a></h1>
 {% endblock %}
 
 {% block content %}
-    <h3>{{product}}</h3>
-    <p>{{product.description|linebreaks}}</p>
-    <p>{{product.price}} Р</p>
-    <!--Ссылку закодим потом-->
-    <a href="{% url 'shop:order' category.category_slug product.product_slug %}"
-       class="btn btn-lg btn-success">В корзину</a>
+    <div class="product-details">
+        <h2>{{ product.title }}</h2>
+        <p class="price">${{ product.price }}</p>
+        <p class="availability">{% if product.availability %}В наличии{% else %}Нет в наличии{% endif %}</p>
+        <p class="description">{{ product.description|linebreaks }}</p>
+        <a href="{% url 'shop:order' category.category_slug product.product_slug %}" class="btn btn-lg btn-success">В корзину</a>
+    </div>
+
     {% if product_photo %}
         <div class="swiper mySwiper">
             <div class="swiper-wrapper">
                 {% for photo in product_photo %}
                     <div class="swiper-slide">
-                        <figure>
-                            <img src="{{photo.photo.url}}" alt="{{photo}}_photo" width="200px">
-                        </figure>
+                        <img src="{{ photo.photo.url }}" alt="{{ photo.product.title }}_photo">
                     </div>
                 {% endfor %}
             </div>
@@ -35,11 +34,9 @@
 
 
     <link rel="stylesheet" href="{% static 'slider/css/swiper-bundle.min.css' %}"/>
-    <link rel="stylesheet" href="{% static 'slider/css/slider.css' %}">
+    <link rel="stylesheet" href="{% static 'shop/css/product_styles.css' %}">
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
     <script src="{% static 'slider/js/swiper-bundle.min.js' %}"></script>
-    <script src="{% static 'slider/js/slider.js' %}"></script>
-
-
+    <script src="{% static 'shop/js/product.js' %}"></script>
 {% endblock %}

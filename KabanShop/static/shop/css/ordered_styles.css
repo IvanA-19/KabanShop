@@ -1,0 +1,28 @@
+.ordered-container {
+    text-align: center;
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.order-success-message {
+    color: darkblue;
+    font-weight: 600;
+    font-family: 'Segoe Print', serif; /* Убедитесь, что шрифт установлен */
+    margin-bottom: 20px;
+    font-size: 1.5em;
+}
+
+.btn-go-home {
+    font-size: 1.5em; /* Уменьшен размер шрифта для кнопки */
+    font-family: 'Segoe Print', serif;
+    display: flex;
+    align-items: center; /* Выравнивание изображения и текста в кнопке */
+    gap: 10px; /* Пробел между изображением и текстом */
+}
+
+.btn-go-home img {
+    height: 50px; /* Размер изображения */
+    vertical-align: middle;
+}

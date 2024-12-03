@@ -1,5 +1,6 @@
 {% extends 'shop/base.html' %}
 {% load django_bootstrap5 %}
+{% load static %}
 
 {% block title %}Не удалось добавить товар{% endblock %}
 
@@ -8,12 +9,13 @@
 {% endblock %}
 
 {% block content %}
-    <h3>К сожалению нам не удалось добавить товар в корзину, поскольку сейчас магазин не располагает
-    таким количеством единиц товара.<br>Приносим свои извинения!</h3>
-    <a href="{% url 'shop:index' %}" class="btn btn-lg btn-primary">На главную</a>
-    <a href="{% url 'shop:product' category.category_slug product.product_slug %}"
-    class="btn btn-lg btn-danger">Вернуться к карточке товара</a>
-    <a href="{% url 'shop:order' category.category_slug product.product_slug %}"
-    class="btn btn-lg btn-success">Попробовать снова</a>
+    <div class="order-error-container">
+        <h3>К сожалению, нам не удалось добавить товар в корзину, поскольку сейчас магазин не располагает таким количеством единиц товара.<br>Приносим свои извинения!</h3>
+        <div class="buttons-container">
+            <a href="{% url 'shop:index' %}" class="btn btn-primary">На главную</a>
+            <a href="{% url 'shop:product' category.category_slug product.product_slug %}" class="btn btn-danger">Вернуться к карточке товара</a>
+            <a href="{% url 'shop:order' category.category_slug product.product_slug %}" class="btn btn-success">Попробовать снова</a>
+        </div>
+    </div>
+    <link rel="stylesheet" href="{% static 'shop/css/order_error_styles.css' %}">
 {% endblock %}
-

@@ -1,0 +1,46 @@
+.profile-container {
+    display: flex;
+    gap: 30px; /* Пробел между аватаркой и информацией */
+    margin-top: 30px;
+    align-items: center; /* Вертикальное выравнивание */
+}
+
+.avatar-container {
+    width: 300px; /* Ширина контейнера с аватаркой */
+}
+
+.avatar-img {
+    width: 100%; /* Аватарка занимает всю ширину контейнера */
+    height: auto;
+    border-radius: 50%; /* Круглая аватарка */
+}
+
+.profile-info-container {
+    flex: 1; /* Информация занимает оставшееся пространство */
+}
+
+.profile-info-container h3 {
+    font-size: 2em;
+    margin-bottom: 10px;
+}
+
+.profile-info-container h4 {
+    margin-bottom: 5px;
+}
+
+.btn-edit-profile {
+    margin-top: 20px;
+    padding: 15px 30px;
+    font-size: 1.1em;
+}
+
+/* Адаптивные стили */
+@media (max-width: 768px) {
+    .profile-container {
+        flex-direction: column; /* На маленьких экранах информация под аватаркой */
+        align-items: center;
+    }
+    .avatar-container {
+        margin-bottom: 20px;
+    }
+}

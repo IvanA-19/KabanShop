@@ -1,24 +1,33 @@
 {% extends 'shop/base.html' %}
+{% load static %}
 
 {% block title %}Каталог товаров{% endblock %}
 
 {% block page_header %}
-    <h1>Категории товаров</h1>
+    <h1>Каталог товаров</h1>
 {% endblock %}
 
 {% block content %}
-    <!--Выводим список всех категорий-->
-    <ul>
+    <div class="categories-list">
         {% for category in categories %}
-            <li>
-                <h4>
-                    <a href="{% url 'shop:category' category.category_slug %}">{{category}}</a>
-                </h4>
-            </li>
+            <div class="category-item" id="category-{{category.id}}">
+                <a href="{% url 'shop:category' category.category_slug %}">
+                    {% if category.preview %}
+                        <img src="{{ category.preview.url }}" alt="{{ category.title }}" class="category-image">
+                    {% else %}
+                        <img src="{% static 'shop/images/placeholder.jpg' %}" alt="Placeholder" class="category-image">
+                    {% endif %}
+                    <h3>{{ category.title }}</h3>
+                </a>
+                <div class="category-description" id="description-{{category.id}}">
+                    <p>{{ category.description|truncatechars:50 }}</p>
+                </div>
+            </div>
         {% empty %}
-            <li>
-                <h3>На данный момент нет ни одной категории</h3>
-            </li>
+            <p class="text-center">На данный момент нет ни одной категории</p>
         {% endfor %}
-    </ul>
+    </div>
+
+    <link rel="stylesheet" href="{% static 'shop/css/shop.css' %}">
+    <script src="{% static 'shop/js/shop.js' %}"></script>
 {% endblock %}

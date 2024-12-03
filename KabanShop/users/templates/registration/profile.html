@@ -1,38 +1,34 @@
 {% extends 'shop/base.html' %}
-
 {% load static %}
 
 {% block title %}Профиль{% endblock %}
 
 {% block page_header %}
-    <h1 style="text-align: center">Профиль пользователя</h1>
+    <h1>Профиль пользователя</h1>
 {% endblock %}
 
 {% block content %}
-    <div class="main_container">
-        <div class="profile_container">
-            <div class="avatar_container">
-                {% if profile.avatar %}
-                <img src="{{profile.avatar.url}}" width="300px" height="300px" alt="user_avatar" class="avatar_img">
-                {% else %}
-                    <img src="{% static 'shop/images/avatars/void_avatar.jpg' %}" width="300px" alt="">
-                {% endif %}
-            </div>
-
-            <div class="profile_content_container">
-                <h3>{{profile.username}}</h3>
-                <h4>Имя: {{profile.first_name}}</h4>
-                <h4>Фамилия: {{profile.last_name}}</h4>
-                <h4>Email: {{profile.email}}</h4>
-                {% if profile.phone_number %}
-                    <h4>Номер телефона: {{profile.phone_number}}</h4>
-                {% endif %}
-                {% if profile.address %}
-                    <h4>Адрес: {{profile.address}}</h4>
-                {% endif %}
-                <a href="{% url 'users:edit_profile' %}" class="btn btn-lg btn-primary">Редактировать профиль</a>
-            </div>
+    <div class="profile-container">
+        <div class="avatar-container">
+            {% if profile.avatar %}
+                <img src="{{ profile.avatar.url }}" alt="user_avatar" class="avatar-img">
+            {% else %}
+                <img src="{% static 'shop/images/avatars/void_avatar.jpg' %}" alt="user_avatar" class="avatar-img">
+            {% endif %}
+        </div>
+        <div class="profile-info-container">
+            <h3>{{ profile.username }}</h3>
+            <h4>Имя: {{ profile.first_name }}</h4>
+            <h4>Фамилия: {{ profile.last_name }}</h4>
+            <h4>Email: {{ profile.email }}</h4>
+            {% if profile.phone_number %}
+                <h4>Номер телефона: {{ profile.phone_number }}</h4>
+            {% endif %}
+            {% if profile.address %}
+                <h4>Адрес: {{ profile.address }}</h4>
+            {% endif %}
+            <a href="{% url 'users:edit_profile' %}" class="btn btn-primary btn-edit-profile">Редактировать профиль</a>
         </div>
     </div>
+    <link rel="stylesheet" href="{% static 'shop/css/profile_styles.css' %}">
 {% endblock %}
-

@@ -1,0 +1,42 @@
+.cart-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80%;
+    padding: 15px;
+    border: 1px solid #ccc;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+.item-details {
+    flex: 1;
+}
+
+.empty-cart {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.cart-summary {
+    margin-top: 20px;
+    text-align: center;
+}
+
+.delete-button {
+    margin-left: 10px;
+}
+
+
+/* Адаптивные стили */
+@media (max-width: 768px) {
+    .cart-item {
+        width: 95%;
+    }
+}

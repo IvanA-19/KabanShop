@@ -1,0 +1,20 @@
+.order-error-container {
+    text-align: center;
+    margin-top: 50px;
+}
+
+.order-error-container h3 {
+    margin-bottom: 20px;
+    font-size: 1.2em;
+}
+
+.buttons-container {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Расстояние между кнопками */
+}
+
+.buttons-container a.btn {
+    flex: 1; /* Растягиваем кнопки на всю доступную ширину */
+    min-width: 150px; /* Минимальная ширина кнопок для адаптивности */
+}

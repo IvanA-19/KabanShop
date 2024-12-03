@@ -1,6 +1,6 @@
 {% extends 'shop/base.html' %}
-
 {% load django_bootstrap5 %}
+{% load static %}
 
 {% block title %}Необходимо заполнить профиль{% endblock %}
 
@@ -9,7 +9,9 @@
 {% endblock %}
 
 {% block content %}
-    <h3>Нам не удалось оформить заказ, поскольку ваш профиль заполнен не полностью.
-     Пожалуйста, внесите изменения в профиль и повторите попытку</h3>
-    <a href="{% url 'users:edit_profile' %}" class="btn btn-lg btn-primary">Перейти к редактированию профиля</a>
+    <div class="fill-profile-container">
+        <h3>Нам не удалось оформить заказ, поскольку ваш профиль заполнен не полностью. Пожалуйста, внесите изменения в профиль и повторите попытку</h3>
+        <a href="{% url 'users:edit_profile' %}" class="btn btn-primary btn-edit-profile">Перейти к редактированию профиля</a>
+    </div>
+    <link rel="stylesheet" href="{% static 'shop/css/fill_profile_styles.css' %}">
 {% endblock %}
