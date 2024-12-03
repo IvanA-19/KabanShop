@@ -15,7 +15,7 @@
                 <div class="item-details">
                     <h3>{{ product.product }}</h3>
                     <p>Количество: {{ product.count }}</p>
-                    <p>Цена: {{ product.price }}</p>
+                    <p>Цена: {{ product.price }} руб.</p>
                 </div>
                 <a href="{% url 'shop:delete_product' product.id %}" class="btn btn-danger btn-sm delete-button">Удалить</a>
             </div>
@@ -28,7 +28,7 @@
 
         {% if products %}
             <div class="cart-summary">
-                <h4>Итоговая цена: {{ final_price }}</h4>
+                <h4>Итоговая цена: {{ final_price }} руб.</h4>
                 <a href="{% url 'shop:ordered' %}" class="btn btn-primary">Оформить заказ</a>
             </div>
         {% endif %}
