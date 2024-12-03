@@ -22,7 +22,7 @@ def cart_view(request):
     products_in_cart = Cart.objects.filter(buyer_id=request.user)
     final_price = 0
     for product in products_in_cart:
-        final_price += product.price
+        final_price += product.price * product.count
     context = {'products': products_in_cart, 'final_price':final_price}
     return render(request, 'shop/cart.html', context=context)
 
@@ -71,7 +71,18 @@ def added_to_cart_view(request, category_slug, product_slug):
 @login_required(login_url='users:login')
 def order_view(request, category_slug, product_slug):
     product = Product.objects.get(product_slug=product_slug)
-    product_in_ware_house = WareHouse.objects.filter(product_id=product.id)
+
+    error = False
+    try:
+        product_in_ware_house = WareHouse.objects.get(product_id=product.id)
+    except WareHouse.DoesNotExist:
+        error = True
+    finally:
+        if error:
+            product_in_ware_house = None
+        else:
+            product_in_ware_house = WareHouse.objects.get(product_id = product.id)
+
     category = Category.objects.get(category_slug=category_slug)
     available_product_count = product.count
     if product_in_ware_house:
@@ -93,14 +104,14 @@ def order_view(request, category_slug, product_slug):
                     product.count -= new_order.count
                     product.save()
                 elif product.count - new_order.count < 10:
-                    product_in_ware_house = WareHouse.objects.filter(product_id=product.id)
+                    product_in_ware_house = WareHouse.objects.get(product_id=product.id)
                     product.count = available_product_count - new_order.count
                     product_in_ware_house.count = 0
                     product_in_ware_house.availability = False
                     product.save()
                     product_in_ware_house.save()
             else:
-                product_in_ware_house = WareHouse.objects.filter(product_id=product.id)
+                product_in_ware_house = WareHouse.objects.get(product_id=product.id)
                 new_order.count = available_product_count
                 product.delete()
                 if product_in_ware_house:

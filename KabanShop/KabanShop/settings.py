@@ -87,9 +87,9 @@ WSGI_APPLICATION = 'KabanShop.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'KabanShop',
+        'NAME': 'Kabanchik',
         'USER': 'postgres',
-        'PASSWORD': '12345678',
+        'PASSWORD': '37735553d',
         'HOST': 'localhost'
     }
 }
